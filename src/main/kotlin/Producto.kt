@@ -15,7 +15,7 @@ class Producto(
         if (cantidad <= stock) {
             stock -= cantidad
         } else {
-            println("No hay suficiente stock para vender $cantidad unidades de $nombre")
+            throw IllegalStateException("No hay suficiente stock para vender $cantidad unidades de $nombre")
         }
     }
 
